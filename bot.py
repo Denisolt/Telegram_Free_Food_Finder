@@ -2,9 +2,11 @@ import logging
 import telegram
 from telegram.error import NetworkError, Unauthorized
 from time import sleep
-
+from bs4 import BeautifulSoup
+import requests
 
 update_id = None
+url = 'https://postmates.com/new-york-city'
 
 def main():
     global update_id
@@ -22,7 +24,7 @@ def main():
 
     while True:
         try:
-            echo(bot)
+            FoodFinder(bot)
         except NetworkError:
             sleep(1)
         except Unauthorized:
@@ -30,7 +32,7 @@ def main():
             update_id += 1
 
 
-def echo(bot):
+def FoodFinder(bot):
     global update_id
     # Request updates after the last update_id
     for update in bot.getUpdates(offset=update_id, timeout=10):
@@ -39,8 +41,16 @@ def echo(bot):
         update_id = update.update_id + 1
 
         if update.message:  # your bot can receive updates without messages
-            # Reply to the message
-            update.message.reply_text(update.message.text)
+            webpage = requests.get(url)
+            soup = BeautifulSoup(webpage.text, 'html.parser')
+            free_food = [s for s in soup.body.stripped_strings if 'free' in s.lower()]
+            if free_food:
+                body = 'Free Postmates!\n\n' + '\n'.join(free_food)
+                #print body #testing
+                #replies
+                update.message.reply_text(body)
+
+
 
 
 if __name__ == '__main__':
