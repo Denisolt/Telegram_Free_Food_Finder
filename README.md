@@ -1,16 +1,20 @@
 # Free Food Finder on Telegram
-<h3> Search for @DeniShakh_bot </h3>
-<h3> This TelegramBot looks for free food on PostMates in New York City and sends the deals if there are any available </h3>
-
-## Installation
-
-Activation of virtual environment:
-
-source local/bin/activate
+<h4> Search for @DeniShakh_bot or </h4>
+<h4> Click: https://telegram.me/DeniShakh_bot </h4> 
+</br>
+<h4> This TelegramBot looks for free food on PostMates in New York City and sends the deals if there are any available </h4>
+## Installation:
+Downloading:
 ```
+git clone https://github.com/Denisolt/Telegram-Free-Food-Finder
+cd Telegram-Free-Food-Finder
+```
+Activation of virtual environment:
+```
+source local/bin/activate
 pip install -r /path/to/requirements.txt
 ```
-## Execution
+## Execution:
 ```
 Python bot.py
 ```
