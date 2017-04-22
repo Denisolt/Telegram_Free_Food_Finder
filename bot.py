@@ -31,7 +31,6 @@ def main():
             # The user has removed or blocked the bot.
             update_id += 1
 
-
 def FoodFinder(bot):
     global update_id
     # Request updates after the last update_id
@@ -49,6 +48,8 @@ def FoodFinder(bot):
                 #print body #testing
                 #replies
                 update.message.reply_text(body)
+            else:
+                update.message.reply_text('Unfortunately there is no free food at the moment on PostMates.\nSorry, bro...')
 
 
 
