@@ -18,3 +18,5 @@ pip install -r /path/to/requirements.txt
 ```
 Python bot.py
 ```
+</br>
+This bot is still in Beta
