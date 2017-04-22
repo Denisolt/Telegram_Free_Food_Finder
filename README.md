@@ -1,8 +1,8 @@
 # Free Food Finder on Telegram
 <h4> Search for @DeniShakh_bot or </h4>
-<h4> Click: https://telegram.me/DeniShakh_bot </h4> 
-</br>
+<h4> Click: https://telegram.me/DeniShakh_bot </h4> </br>
 <h4> This TelegramBot looks for free food on PostMates in New York City and sends the deals if there are any available </h4>
+
 ## Installation:
 Downloading:
 ```
