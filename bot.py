@@ -11,7 +11,7 @@ url = 'https://postmates.com/new-york-city'
 def main():
     global update_id
     # Telegram Bot Authorization Token
-    bot = telegram.Bot('195979460:AAH_Ec24Mpej4k_EFrbgEV3dDCv6vJ2v3C4')
+    bot = telegram.Bot('#your API token')
 
     # get the first pending update_id, this is so we can skip over it in case
     # we get an "Unauthorized" exception.
