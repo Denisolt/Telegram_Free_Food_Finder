@@ -16,6 +16,9 @@ pip install -r /path/to/requirements.txt
 ```
 ## Execution:
 ```
+nano bot.py
+#line 14 add your api token from BotFather
+bot = telegram.Bot('add your API Token')
 Python bot.py
 ```
 </br>
